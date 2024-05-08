@@ -16,7 +16,7 @@ config:
   options:
     remove-secret:
       description: Whether to remove the secret or not
-      default: false
+      default: true
       type: boolean
 
 provides:
