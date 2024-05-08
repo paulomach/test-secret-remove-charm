@@ -1,0 +1,28 @@
+name: buggy-secret
+type: charm
+title: Test charm
+summary: A very short one-line summary of the charm.
+description: Test secret removal
+
+bases:
+  - build-on:
+    - name: ubuntu
+      channel: "22.04"
+    run-on:
+    - name: ubuntu
+      channel: "22.04"
+
+config:
+  options:
+    remove-secret:
+      description: Whether to remove the secret or not
+      default: false
+      type: boolean
+
+provides:
+  a-relation:
+    interface: a_interface
+
+requires:
+  b-relation:
+    interface: a_interface
