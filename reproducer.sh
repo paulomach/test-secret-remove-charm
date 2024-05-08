@@ -2,6 +2,8 @@
 
 set -x
 
+charmcraft pack
+
 MODEL1=$1
 MODEL2=$2
 
